@@ -1,0 +1,40 @@
+/* src/styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* body{
+  font-family:'Brush Script MT';
+} */
+
+
+.bf{
+  position: relative;
+}
+
+.bf::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: url(../src/assets/Cloud-background.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: scaleX(1.5) scaleY(1.1) translateY(-3%);
+}
+
+.container{
+  max-width: min(1000px,calc(100% - 8rem));
+  margin: auto;
+  display: flex;
+}
+
+@media (max-width:1100px){
+  .container{
+    max-width: min(1000px,calc(100% - 2rem));
+
+  }
+}
+
+
